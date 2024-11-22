@@ -21,7 +21,7 @@ void draw() {
 }
 
 void keyPressed() {
-  switch(key) {
+  switch(key) {                                                                                                                                                         
   case 'i':
     modo = '2';
     break;
@@ -37,7 +37,7 @@ void keyPressed() {
     frameRate(frameRate -5 <= 1 ? 1 :  frameRate - 5);
     break;
   case 's':
-    frameRate(frameRate + 5 >= 255 ? 255 :  frameRate + 5);
+    frameRate(frameRate + 5 >= 60 ? 60 :  frameRate + 5);
     break;
   default:
     break;
