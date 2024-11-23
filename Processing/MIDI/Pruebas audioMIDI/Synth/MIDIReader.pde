@@ -14,7 +14,10 @@ MIDIReader(MidiReceiver receiver){
   if (infos.length > 0) {
     // Abre el primer dispositivo MIDI
     try {
-      device = MidiSystem.getMidiDevice(infos[5]);
+      device = MidiSystem.getMidiDevice(infos[8]);
+      for(int i = 0; i < infos.length; i++){
+      println(i + ":" + infos[i]);
+    }
       println(device.getMaxReceivers());// Selecciona el primer dispositivo
       device.open();  // Abre el dispositivo para recibir datos
 

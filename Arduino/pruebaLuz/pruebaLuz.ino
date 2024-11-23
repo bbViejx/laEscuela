@@ -7,9 +7,7 @@ bool ledin =true;
 #define POTB A3
 
 void setup() {
- pinMode(4, INPUT);       // Configura el pin del botón como entrada
-  pinMode(6, OUTPUT);
-  pinMode(9, OUTPUT);
+ pinMode(4, INPUT); 
   pinMode(POT, INPUT);
   pinMode(POTB, INPUT);
   Serial.begin(9600);
@@ -29,6 +27,10 @@ void loop() {
       analogWrite(5,255-potenciaMapeada);
       }
       ledin = !ledin;
+
+       Serial.print(255-potenciaMapeada);
+  Serial.print(",");
+  Serial.println(frameRateMapeado);
     delay(300-frameRateMapeado);
    
 }
